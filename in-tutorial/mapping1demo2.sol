@@ -25,10 +25,8 @@ contract RecordRegistry {
     /**
      * @dev Allows a user to get getApprovedRecords.
      */
-        function getApprovedRecords() public view return (mapping) {
-
+        function getApprovedRecords() public view returns (mapping) {
         return approvedRecords;
-
     }
     
     /**
