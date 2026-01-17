@@ -15,7 +15,17 @@ contract Mappings {
 //helper array  helper array to store a list of all the keys present in favoriteNumbers
 
 //To return all of the favorite numbers, you can then iterate through addressesOfFavs
-// ook up that addresses’ favorite number, add it to a return array, and then return the array when you’re done
+// look up that addresses’ favorite number, add it to a return array, and then return the array when you’re done
+
+function returnAllFavorites() public view returns (uint[] memory) {
+    uint[] memory allFavorites = new uint[](addressesOfFavs.length);
+
+    for(uint i = 0; i < allFavorites.length; i++) {
+        allFavorites[i] = favoriteNumbers[addressesOfFavs[i]];
+    }
+
+    return allFavorites;
+}
 
 
 }
