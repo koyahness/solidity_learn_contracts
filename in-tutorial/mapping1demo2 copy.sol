@@ -6,11 +6,15 @@ contract RecordRegistry {
     // Returns true if an album name is approved
     mapping(string => bool) public approvedRecords;
 
+    // A supporting array to keep track of album names for retrieval
+    string[] private approvedList;
+
     // Indexes user addresses to their personal favorite albums
     mapping(address => mapping(string => bool)) public userFavorites;
 
     constructor() {
         // Loading the approved albums during deployment
+        // We use a helper function to avoid repeating code
         approvedRecords["Thriller"] = true;
         approvedRecords["Back in Black"] = true;
         approvedRecords["The Bodyguard"] = true;
@@ -21,6 +25,13 @@ contract RecordRegistry {
         approvedRecords["Rumours"] = true;
         approvedRecords["Saturday Night Fever"] = true;
     }
+
+    // Helper function to update both the mapping and the array at the same time
+    function _addRecord(string memory _name) private {
+        approvedRecords[_name] = true;
+        approvedList.push(_name);
+
+
     
     /**
      * @dev Allows a user to get getApprovedRecords.
