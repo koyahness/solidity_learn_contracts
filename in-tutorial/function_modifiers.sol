@@ -8,4 +8,15 @@ contract Modifiers {
     constructor () {
         owner = msg.sender;
     }
+
+    error NotOwner(address _msgSender);
+
+    modifier onlyOwner {
+    if (msg.sender != owner) {
+        revert NotOwner(msg.sender);
+    }
+    _;
+}
+
+
 }
