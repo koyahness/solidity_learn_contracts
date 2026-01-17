@@ -32,6 +32,8 @@ contract RecordRegistry {
         approvedList.push(_name);
     }
 
+// Custom error definition for better gas efficiency
+    error NotApproved(string albumName);
 
     /**
      * @dev Adds an album to the sender's favorites if it is approved.
