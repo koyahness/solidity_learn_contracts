@@ -33,6 +33,7 @@ modifier onlyEven(uint _number) {
     _;
 }
 
+
 function halver(uint _number) public pure onlyEven(_number) returns (uint) {
     return _number / 2;
 }
