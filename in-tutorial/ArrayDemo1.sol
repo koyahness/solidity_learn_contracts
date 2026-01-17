@@ -5,6 +5,7 @@ pragma solidity ^0.8.0;
 
 contract ArrayDemo {
     uint[] public numbers = [1,2,3,4,5,6,7,8,9,10];
+    uint numEven;
 
     function _countEvenNumbers() internal view returns(uint) {
 // You aren’t modifying state, so you should mark it as such: view
