@@ -47,10 +47,13 @@ contract RecordRegistry {
      * @dev Allows a user to mark an album as a favorite.
      * @param _albumName The name of the album.
      */
+
     function markAsFavorite(string memory _albumName) public {
         if (!approvedRecords[_albumName]) {
             // Revert with the custom error and the specific album name
             revert NotApproved(_albumName); //Adds an album to favorites ONLY if it is in the approved list.
+        }
+        // Add to the user's mapping
         userFavorites[msg.sender][_albumName] = true;
     }
 
@@ -62,5 +65,39 @@ contract RecordRegistry {
     function removeFavorite(string memory _albumName) public {
         userFavorites[msg.sender][_albumName] = false;
     }
+    
+    
+    /**
+     * @dev Retrieves a list of all favorite album names for a specific address.
+     * @param _user The address to look up.
+     */
+        function getUserFavorites(address _user) public view returns (string[] memory) {
+
+        // 1. Create a temporary array in memory to store matches.
+        // It can't be longer than the total number of approved albums.
+        
+        string[] memory tempFavorites = new string[](approvedList.length);
+        uint256 count = 0;
+
+        // 2. Iterate through the master list of approved albums.
+        for (uint256 i = 0; i < approvedList.length; i++) {
+            string memory album = approvedList[i];
+            
+            // 3. Check if THIS specific user has favorited THIS specific album.
+            if (userFavorites[_user][album]) {
+                tempFavorites[count] = album;
+                count++;
+            }
+        }
+
+        // 4. Resize the array to remove empty slots before returning.
+        string[] memory finalFavorites = new string[](count);
+        for (uint256 j = 0; j < count; j++) {
+            finalFavorites[j] = tempFavorites[j];
+        }
+
+        return finalFavorites;
+    }
+    
 
 }
