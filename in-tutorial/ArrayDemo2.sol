@@ -27,6 +27,29 @@ contract ArrayDemo {
             
     }
 
+function _countEvenNumbers() internal view returns(uint) {
+// You aren’t modifying state, so you should mark it as such: view
+    uint result = 0;
+    for(uint i = 0; i < numbers.length; i++) {
+        if(numbers[i] % 2 == 0) {
+            result++;
+        }
+    }
 
+    function getEvenNumbers() external view returns(uint[] memory) {
+        // filter through the array to get even numbers
+        uint resultsLength = _countEvenNumbers();
+        uint[] memory evenNumbers_results = new uint[](resultsLength);
+        uint cursor = 0;
+
+     for(uint i = 0; i < numbers.length; i++) { //results in looping through the same array twice
+        if(numbers[i] % 2 == 0) {
+            evenNumbers_results[cursor] = numbers[i];
+            cursor++;
+        }
+    }
+
+    return evenNumbers_results;
+}
 
 }
