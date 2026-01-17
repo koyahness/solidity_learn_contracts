@@ -9,4 +9,5 @@ contract Mappings {
     function saveFavoriteNumber(address _address, uint _favorite) public {
     favoriteNumbers[_address] = _favorite;
 }
+
 }
