@@ -19,7 +19,7 @@ contract ArrayDemo {
 }
 
     function getEvenNumbers() external view returns(uint[] memory) {
-        // filter through the array
+        // filter through the array to get even numbers
         uint resultsLength = _countEvenNumbers();
         uint[] memory evenNumbers_results = new uint[](resultsLength);
         uint cursor = 0;
