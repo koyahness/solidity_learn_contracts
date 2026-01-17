@@ -7,9 +7,12 @@ contract Mappings {
     address[] addressesOfFavs;
 
     function saveFavoriteNumber(uint _favorite) public {
+        if(favoriteNumbers[msg.sender] == 0) { //check first if the address already has a number as a value in favoriteNumbers
+            addressesOfFavs.push(msg.sender);
+        }
         favoriteNumbers[msg.sender] = _favorite;
         // Imperfect solution, see below
-        addressesOfFavs.push(msg.sender); // array to store a list of all the keys present in favoriteNumbers
+         // array to store a list of all the keys present in favoriteNumbers
     }
 //mapping data type is that it is not iterable - you cannot loop through and manipulate or return all values in the mapping
 //helper array  helper array to store a list of all the keys present in favoriteNumbers
