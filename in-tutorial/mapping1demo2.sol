@@ -37,10 +37,12 @@ contract RecordRegistry {
         userFavorites[msg.sender][_albumName] = false;
     }
 
-    function getApprovedRecords() public {
+    function getApprovedRecords() public view return (mapping) {
+
+        return approvedRecords;
 
     }
 
 
-    
+
 }
