@@ -49,5 +49,7 @@ Favorites public myFavorites3 = Favorites(
 );
 
 
+//to store multiple instances
+
 
 }
