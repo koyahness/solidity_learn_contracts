@@ -32,6 +32,14 @@ Favorites memory myFavorites = Favorites({
     lotteryNumbers: [uint(1), 2, 3, 4, 5]
 });
 
+//  shorthand, skip the member names and curly brackets are not included in this forma
+
+Favorites memory myFavorites2 = Favorites(
+    29,
+    14,
+    "red",
+    [uint(1), 2, 3, 4, 5]
+);
 
 
 
