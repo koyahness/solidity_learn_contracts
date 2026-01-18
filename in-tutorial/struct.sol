@@ -9,8 +9,11 @@ contract Mappings {
     //But what if your users have favorite colors too? Or favorite cars? etc
     //ou could create a mapping for each of these, but it would quickly get awkward.
     //e.g.
+    // mapping (address => uint) favoriteNumbers;
     // mapping (address => uint) birthDay;
-    // 
+    // mapping (address => uint) favoriteNumbers;
+    // mapping (address => uint) favoriteNumbers;
+    // mapping (address => uint) favoriteNumbers;
 
     struct Favorites {
     uint favoriteNumber;
