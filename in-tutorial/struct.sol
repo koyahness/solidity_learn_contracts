@@ -11,9 +11,8 @@ contract Mappings {
     //e.g.
     // mapping (address => uint) favoriteNumbers;
     // mapping (address => uint) birthDay;
-    // mapping (address => uint) favoriteNumbers;
-    // mapping (address => uint) favoriteNumbers;
-    // mapping (address => uint) favoriteNumbers;
+    // mapping (address => string) favoriteColor;
+    // mapping (address => array) lotteryNumbers;
 
     struct Favorites {
     uint favoriteNumber;
