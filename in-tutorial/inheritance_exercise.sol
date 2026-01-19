@@ -8,7 +8,10 @@ uint public idNumber;
 uint public managerId;
 
 
+constructor (uint, uint) {
 
+    
+}
 
 
 
