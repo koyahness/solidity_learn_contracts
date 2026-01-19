@@ -75,6 +75,9 @@ contract ContractA_B is ContractB, ContractC {
     contractType = _initialType;
 }
 
+function changeType(Type _newType) external {
+    contractType = _newType;
+}
 
 function whoAmExternal() external pure returns (string memory) {
         return whoAmIInternal();
