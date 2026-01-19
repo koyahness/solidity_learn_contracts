@@ -57,5 +57,7 @@ contract ContractA_B is ContractB, ContractC {
     function whoAmExternal() external pure returns (string memory) {
         return whoAmIInternal();
     }
-// The copmile error is because both ContractB and ContractC contain a function called whoAmI. As a result, the compiler needs instruction on which to use.
+// The compile error is because both ContractB and ContractC contain a function called whoAmI. As a result, the compiler needs instruction on which to use.
+//One method to resolve this conflict is to use the virtual and override keywords to enable you to add functionality to choose which to call.
+//Add the virtual keyword to the whoAmI function in both ContractC and ContractB.
 }
