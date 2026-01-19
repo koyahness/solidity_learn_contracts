@@ -79,5 +79,8 @@ return hourlyRate * hours_time;
 
 contract Manager {
 
-    
+uint[] public = employee_Ids
+
+function addReport
+
 }
