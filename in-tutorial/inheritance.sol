@@ -51,3 +51,10 @@ contract ContractC {
         return "contract C";
     }
 }
+
+// bad code example, do not use
+contract ContractA_B is ContractB, ContractC {
+    function whoAmExternal() external pure returns (string memory) {
+        return whoAmIInternal();
+    }
+}
