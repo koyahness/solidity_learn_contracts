@@ -47,6 +47,9 @@ contract ContractA is ContractB {
     // A slightly more complex contract:
     // Will have more complex bytecode. In this case, mostly to store the long string present in the return:
 
+    //Add an enum at the contract level in ContractA
+    
+
 }
 
 
