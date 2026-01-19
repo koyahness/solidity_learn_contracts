@@ -74,3 +74,10 @@ return hourlyRate * hours_time;
 }
 
 }
+
+
+
+contract Manager {
+
+    
+}
