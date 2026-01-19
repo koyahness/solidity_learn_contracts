@@ -66,7 +66,7 @@ contract ContractC {
 // bad code example, do not use
 contract ContractA_B is ContractB, ContractC {
 
-    //Add an enum at the contract level in ContractA
+    //Add an enum at the contract level in ContractA to allow to switch contracts
     enum Type { None, ContractBType, ContractCType }
     
     Type contractType;
