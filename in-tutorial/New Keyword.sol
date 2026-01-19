@@ -24,7 +24,7 @@ contract Complimenter {
 
 contract ComplimenterFactory {
 
-    function CreateComplimenter(string memroy _name) public returns (address){
+    function CreateComplimenter(string memory _name) public returns (address){
         new Complimenter(_name)
     }
 
