@@ -26,5 +26,8 @@ contract ContractA is ContractB {
 
     // Even though ContractA doesn’t have any functions in it, the deployment still shows the button to call whoAmI
     // ContractA now reports that it is “contract B”, due to the inheritance of the function from Contract B.
-    
+    // Contracts can call the internal functions from contracts they inherit from
+    function whoAmIExternal_A() external pure returns (string memory) {
+        return whoAmIInternal();
+    }
 }
