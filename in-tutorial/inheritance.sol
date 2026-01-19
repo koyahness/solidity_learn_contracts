@@ -15,5 +15,7 @@ contract ContractB {
 
 // Inheritance between contracts is indicated by the is
 contract ContractA is ContractB {
+
+    // Even though ContractA doesn’t have any functions in it, the deployment still shows the button to call whoAmI
     
 }
