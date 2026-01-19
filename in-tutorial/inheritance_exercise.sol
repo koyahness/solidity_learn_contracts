@@ -81,6 +81,17 @@ contract Manager {
 
 uint[] public = employee_Ids
 
-function addReport
+function addReport(_employee_Ids) public view returns (uint[]) {
+
+    return employee_Ids.push(_employee_Ids);
+
+
+}
+
+function resetReports(_employee_Ids) public view returns (uint[]) {
+
+    delete employee_Ids;
+
+}
 
 }
