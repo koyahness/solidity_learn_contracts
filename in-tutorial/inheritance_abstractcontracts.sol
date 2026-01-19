@@ -27,9 +27,6 @@ contract ContractB {
 }
 
 
-abstract contract ContractD {
-    function whoAreYou() public virtual view returns (string memory);
-}
 
 // Inheritance between contracts is indicated by the is
 contract ContractA is ContractB {
@@ -54,13 +51,20 @@ contract ContractA is ContractB {
 
 
 
-
 contract ContractC {
     function whoAmI() public virtual view returns (string memory) {
         return "contract C";
     }
 }
 
+//Only abstract contracts can declare functions that are not implemented
+//Add ContractD as an abstract contract. Add a virtual function called whoAreYou function, but do not add any implementation for that function.
+
+abstract contract ContractD {
+    function whoAreYou() public override view returns (string memory);
+    return "I'm a person!";
+}
+//Only abstract contracts can declare functions that are not implemented. To fix this, provide an override implementation for whoAreYou in ContractA
 
 
 
@@ -68,7 +72,9 @@ contract ContractC {
 // bad code example, do not use
 contract ContractA_B is ContractB, ContractC, contractD {
 
-    //Add an enum at the contract level in ContractA to allow to switch contracts
+    // You’ll get a slightly confusing error that ContractA needs to be marked as abstract. Doing so is not the correct fix.
+    // Add an enum at the contract level in ContractA to allow to switch contracts
+
     enum Type { None, ContractBType, ContractCType }
     
     Type contractType;
