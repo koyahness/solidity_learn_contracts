@@ -79,10 +79,6 @@ function changeType(Type _newType) external {
     contractType = _newType;
 }
 
-function whoAmExternal() external pure returns (string memory) {
-        return whoAmIInternal();
-    }
-
 // The compile error is because both ContractB and ContractC contain a function called whoAmI. As a result, the compiler needs instruction on which to use.
 //One method to resolve this conflict is to use the virtual and override keywords to enable you to add functionality to choose which to call.
 //Add the virtual keyword to the whoAmI function in both ContractC and ContractB.
@@ -118,5 +114,8 @@ function whoAmI() public override(ContractB, ContractC) view returns (string mem
     return "contract A";
 }
 
+function whoAmExternal() external pure returns (string memory) {
+        return whoAmIInternal();
+    }
 
 }
