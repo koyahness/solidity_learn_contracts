@@ -15,6 +15,7 @@ contract AddressBook {
         owner = msg.sender;
     }
 
+    //define a struct
     struct Contact {
        uint id;
        string firstName;
