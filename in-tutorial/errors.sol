@@ -157,6 +157,8 @@ function compilerOperatorErrorFixed() public pure returns (uint) {
 
 function stackDepthLimitFixed() public pure returns (uint) {
 
+    
+
     uint subtotalA;
 
     {
