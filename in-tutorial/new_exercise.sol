@@ -38,6 +38,8 @@ contract AddressBook {
             _phoneNumbers
            );
 
+           non-deleted-contacts.push(contacts);
+
 
         } else {revert NotOwner(msg.sender);}
 
