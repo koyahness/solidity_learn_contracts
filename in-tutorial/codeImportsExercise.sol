@@ -22,7 +22,7 @@ contract ImportsExercise {
 
 using SillyStringUtils for SillyStringUtils.Haiku; //import the library
 
-Haiku public haiku;
+SillyStringUtils.Haiku public haiku;
 
 // saveHaiku should accept three strings and save them as the lines of haiku.
 function saveHaiku (string _line1, string _line2, string _line3) public {
