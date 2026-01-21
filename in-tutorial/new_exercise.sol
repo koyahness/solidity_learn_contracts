@@ -95,21 +95,7 @@ modifier onlyOwner() {
 }
 }
 
-
-contract AddressBookFactoryw{
-
-    function deploy () public returns (AddressBook) {
-        // deploy AddressBook, owner = msg.sender
-
-    AddressBook newAddressBookContract = new AddressBook(msg.sender);
-
-    return newAddressBookContract; //newAddressBookContract.address
-
-    }
-    
-}
-
-contract AddressBookFactory {
+contract {
     // Array to track all deployed address books
     address[] public deployedAddressBooks;
 
