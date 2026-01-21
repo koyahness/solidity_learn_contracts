@@ -53,6 +53,11 @@ function compilerTypeErrorFixed() public pure returns (string memory) {
 // 15 |         return first;
 //    |                ^^^^^
 
+function compilerConversionErrorFixed() public pure returns (uint) {
+    int8 first = 1;
+
+    return uint(uint8(first));
+}
 
 
 }
