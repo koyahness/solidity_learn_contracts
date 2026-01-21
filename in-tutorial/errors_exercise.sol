@@ -15,6 +15,7 @@ contract ErrorTriageExercise {
     ) public pure returns (uint[] memory) {
         uint[] memory results = new uint[](3);
 
+        // Fix: Calculate absolute difference to avoid underflow
         results[0] = _a - _b;
         results[1] = _b - _c;
         results[2] = _c - _d;
