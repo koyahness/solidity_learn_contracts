@@ -300,6 +300,15 @@ function badSubstractionFixed() public pure returns (int) {
 // Divide by Zero
 // Divide by zero errors also trigger a panic, with a code of 12.
 
+function badDivision() public pure returns (uint) {
+    uint first = 1;
+    uint second = 0;
+    return first / second;
+}
+
+
+
+
 
 
 }
