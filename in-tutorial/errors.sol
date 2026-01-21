@@ -195,7 +195,7 @@ function stackDepthLimitFixed() public pure returns (uint) {
         uint fourteenth = 14;
         uint fifteenth = 15;
         uint sixteenth = 16;
-        
+
         subtotalB = ninth +
             tenth +
             eleventh +
@@ -211,6 +211,10 @@ function stackDepthLimitFixed() public pure returns (uint) {
 // solution fixing stack too deep error
     return subtotalA + subtotalB;
 }
+
+
+// Logical Errors
+
 
 
 }
