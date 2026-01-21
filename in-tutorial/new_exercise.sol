@@ -70,7 +70,7 @@ contract AddressBook {
 
          if(_id == contacts.id){
 
-            return contacts[id];
+            return contacts[_id];
 
         } else{revert ContactNotFound(_id);}
 
