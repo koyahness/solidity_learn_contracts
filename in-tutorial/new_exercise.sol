@@ -31,6 +31,7 @@ contract AddressBook {
     // add function
     function addContact(uint _id, string memory _firstName, string memory _lastName, uint[] memory _phoneNumbers) public {
         if (owner == msg.sender){
+
            contacts = Contact (
             _id,
             _firstName,
@@ -84,6 +85,12 @@ contract AddressBook {
 
 contract AddressBookFactory{
 
+    function deploy () public {
+
+        owner = msg.sender;
+
     AddressBook newContract = new AddressBook();
+
+    }
     
 }
