@@ -158,6 +158,7 @@ function compilerOperatorErrorFixed() public pure returns (uint) {
 function stackDepthLimitFixed() public pure returns (uint) {
 
     uint subtotalA;
+
     {
         uint first = 1;
         uint second = 2;
@@ -167,7 +168,7 @@ function stackDepthLimitFixed() public pure returns (uint) {
         uint sixth = 6;
         uint seventh = 7;
         uint eighth = 8;
-        
+
         subtotalA = first +
             second +
             third +
@@ -179,6 +180,7 @@ function stackDepthLimitFixed() public pure returns (uint) {
     }
 
     uint subtotalB;
+    
     {
         uint ninth = 9;
         uint tenth = 10;
