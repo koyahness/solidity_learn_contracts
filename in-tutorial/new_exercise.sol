@@ -7,8 +7,16 @@ pragma solidity ^0.8.0;
 
 contract AddressBook {
 
-    //state variable owner
-    address owner;
+    // Using immutable for gas efficiency since owner is set once
+    address public immutable owner;
+
+    //define a struct of contact types
+    struct Contact {
+       uint id;
+       string firstName;
+       string lastName;
+       uint[] phoneNumbers;
+    }
 
 
     //add contsructor for owner
@@ -16,13 +24,11 @@ contract AddressBook {
         owner = msg.sender;
     }
 
-    //define a struct
-    struct Contact {
-       uint id;
-       string firstName;
-       string lastName;
-       uint[] phoneNumbers;
-    }
+    
+
+
+
+
 
     //declare struct variable of Contact type
     Contact public contacts;
