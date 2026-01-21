@@ -17,6 +17,7 @@ EnumerableSet.AddressSet private visitors;
 // Add a function called registerVisitor that makes use of the library’s add function to add the sender of the message to the visitors set.
 
 //Add a function called registerVisitor that makes use of the library’s add function to add the sender of the message to the visitors set.
+
 function registerVisitor() public {
     visitors.add(msg.sender);
 }
