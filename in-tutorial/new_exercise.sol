@@ -23,7 +23,7 @@ contract AddressBook {
 
 
 
-    error NotOwner(address _msg_sender, "not the owner")
+    error NotOwner(address _msg_sender);
 
 
     // add function
@@ -37,7 +37,7 @@ contract AddressBook {
            );
 
 
-        } else {revert NotOwner(msg.sender)}
+        } else {revert NotOwner(msg.sender, "not the owner!");}
 
     }
 
