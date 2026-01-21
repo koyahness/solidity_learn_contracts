@@ -7,6 +7,12 @@ pragma solidity ^0.8.0;
 contract AddressBook {
 
     address owner;
+
+    constructor {
+        owner = msg.sender
+    }
+
+
     struct Contact {
        uint id;
        string firstName;
@@ -15,7 +21,10 @@ contract AddressBook {
     }
 
     // add function
-    function addContact() public {}
+    function addContact() public {
+        require (owner = msg.sender);
+
+    }
 
     // remove function
     function removeContact() public {}
