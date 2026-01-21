@@ -14,3 +14,6 @@ library SillyStringUtils {
         return string.concat(_input, unicode" 🤷");
     }
 }
+
+
+// Create a contract called ImportsExercise. It should import a copy of SillyStringUtils
