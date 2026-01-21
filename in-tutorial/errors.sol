@@ -153,7 +153,10 @@ function compilerOperatorErrorFixed() public pure returns (uint) {
 //    |                 ^^^^^^
 
 
+//Resolve this error by breaking up large functions and separating operations into different levels of scope.
+
 function stackDepthLimitFixed() public pure returns (uint) {
+
     uint subtotalA;
     {
         uint first = 1;
@@ -164,6 +167,7 @@ function stackDepthLimitFixed() public pure returns (uint) {
         uint sixth = 6;
         uint seventh = 7;
         uint eighth = 8;
+        
         subtotalA = first +
             second +
             third +
