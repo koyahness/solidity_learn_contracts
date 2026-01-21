@@ -6,6 +6,7 @@ pragma solidity ^0.8.0;
 
 contract AddressBook {
 
+    address owner;
     struct Contact {
        uint id;
        string firstName;
