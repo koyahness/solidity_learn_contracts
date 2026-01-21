@@ -27,9 +27,9 @@ contract AddressBook {
 
 
     // add function
-    function addContact(address _owner) public {
+    function addContact(uint _id, string memory _firstName, string _lastName, uint _phoneNumbers) public {
         if (owner == msg.sender){
-            
+
 
         } else {revert NotOwner(msg.sender)}
 
