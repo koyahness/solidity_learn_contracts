@@ -20,6 +20,11 @@ contract ErrorTriageExercise {
         results[1] = _b - _c;
         results[2] = _c - _d;
 
+        //solution
+         results[0] = _a > _b ? _a - _b : _b - _a;
+        results[1] = _b > _c ? _b - _c : _c - _b;
+        results[2] = _c > _d ? _c - _d : _d - _c;
+
         return results;
     }
 
@@ -32,6 +37,18 @@ contract ErrorTriageExercise {
         int _modifier
     ) public pure returns (uint) {
         return _base + _modifier; // Fix: Handle negative modifiers properly to avoid underflow
+
+
+        // solution
+
+         if (_modifier >= 0) {
+            return _base + uint(_modifier);
+        } else {
+            uint absModifier = uint(-_modifier);
+            require(_base >= absModifier, "Result would be negative");
+            return _base - absModifier;
+        }
+
     }
 
     /**
