@@ -27,9 +27,9 @@ contract AddressBook {
 
 
     // add function
-    function addContact(uint _id, string memory _firstName, string _lastName, uint _phoneNumbers) public {
+    function addContact(uint _id, string memory _firstName, string memory _lastName, uint[] memory _phoneNumbers) public {
         if (owner == msg.sender){
-           Contact contacts = Contact (
+           contacts = Contact (
             _id,
             _firstName,
             _lastName,
