@@ -21,7 +21,7 @@ contract AddressBook {
 
     Contact public contacts;
 
-    Contact[] public non-deleted-contacts;
+    Contact[] public non_deleted_contacts;
 
 
 
@@ -39,7 +39,7 @@ contract AddressBook {
             _phoneNumbers
            );
 
-           non-deleted-contacts.push(contacts);
+           non_deleted_contacts.push(contacts);
 
 
         } else {revert NotOwner(msg.sender);}
@@ -50,7 +50,7 @@ contract AddressBook {
     error ContactNotFound(uint _msg_sender);
 
     // remove contact function
-    function deleteContact(uint _id) public returns (Contact memory){}
+    function deleteContact(uint _id) public returns (Contact memory){
 
     if (owner == msg.sender){
 
@@ -62,6 +62,7 @@ contract AddressBook {
 
 
         } else {revert NotOwner(msg.sender);}
+}
 
 
     //view function
@@ -77,7 +78,7 @@ contract AddressBook {
 
     //
     function getAllContacts() public returns (Contact[] memory) {
-        return non-deleted-contacts;
+        return non_deleted_contacts;
     }
 
 }
