@@ -35,7 +35,7 @@ function saveHaiku (string _line1, string _line2, string _line3) public {
 
 }
 
-// saveHaiku should accept three strings and save them as the lines of haiku.
+// getHaiku should return the haiku as a Haiku type..
 function getHaiku () public return (Haiku) {
     return haiku;
 }
