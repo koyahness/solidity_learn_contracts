@@ -44,7 +44,7 @@ contract AddressBook {
 
     error ContactNotFound(uint _msg_sender);
 
-    // remove function
+    // remove contact function
     function deleteContact(uint _id) public {}
     if (owner == msg.sender){
 
