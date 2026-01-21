@@ -45,20 +45,29 @@ contract AddressBook {
     error ContactNotFound(uint _msg_sender);
 
     // remove contact function
-    function deleteContact(uint _id) public {}
+    function deleteContact(uint _id) public returns (Contact memory){}
+
     if (owner == msg.sender){
 
         if(_id == contacts.id){
+
+            return contacts[id];
 
         } else{revert ContactNotFound(_id)}
 
 
         } else {revert NotOwner(msg.sender);}
 
-    }
-
     //view function
-    function viewContact() public {}
+    function getContact(uint _id) public {
+
+         if(_id == contacts.id){
+
+            delete contacts;
+
+        } else{revert ContactNotFound(_id)}
+
+    }
 
 }
 
