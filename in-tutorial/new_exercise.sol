@@ -28,7 +28,10 @@ contract AddressBook {
     error ContactNotFound(uint contactId);
     error ContactAlreadyExists(uint contactId);
 
-
+modifier onlyOwner() {
+        if (msg.sender != owner) revert NotOwner(msg.sender);
+        _;
+    }
 
 
 
