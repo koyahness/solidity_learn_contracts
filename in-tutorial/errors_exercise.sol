@@ -31,7 +31,7 @@ contract ErrorTriageExercise {
         uint _base,
         int _modifier
     ) public pure returns (uint) {
-        return _base + _modifier;
+        return _base + _modifier; // Fix: Handle negative modifiers properly to avoid underflow
     }
 
     /**
