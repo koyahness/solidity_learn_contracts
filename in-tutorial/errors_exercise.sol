@@ -58,9 +58,19 @@ contract ErrorTriageExercise {
     uint[] arr;
 
     function popWithReturn() public returns (uint) {
+        
+        //bug
         uint index = arr.length - 1;
         delete arr[index];
         return arr[index];
+
+        //solution
+        require(arr.length > 0, "Array is empty");
+        
+        // Fix: Store the value before popping, then actually remove the element
+        uint lastElement = arr[arr.length - 1];
+        arr.pop(); // This actually removes the last element
+        return lastElement;
     }
 
     // The utility functions below are working as expected
