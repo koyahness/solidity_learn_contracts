@@ -103,46 +103,46 @@ function compilerOperatorErrorFixed() public pure returns (uint) {
 
 // Stack Depth Limit
 // The EVM stack has 1024 slots, but only the top 16 slots are accessible.
-// As a result, you can only have fewer than 16 variables in scope at one time.
+// As a result, you can only have fewer than 16 variables in scope at one time. *********
 
 //Other items can also use up these slots. You are not guaranteed 15 slots, it can be lower.
 
 // Bad code example, do not use
-function stackDepthLimit() public pure returns (uint) {
-        uint first = 1;
-        uint second = 2;
-        uint third = 3;
-        uint fourth = 4;
-        uint fifth = 5;
-        uint sixth = 6;
-        uint seventh = 7;
-        uint eighth = 8;
-        uint ninth = 9;
-        uint tenth = 10;
-        uint eleventh = 11;
-        uint twelfth = 12;
-        uint thirteenth = 13;
-        uint fourteenth = 14;
-        uint fifteenth = 15;
-        uint sixteenth = 16;
+// function stackDepthLimit() public pure returns (uint) {
+//         uint first = 1;
+//         uint second = 2;
+//         uint third = 3;
+//         uint fourth = 4;
+//         uint fifth = 5;
+//         uint sixth = 6;
+//         uint seventh = 7;
+//         uint eighth = 8;
+//         uint ninth = 9;
+//         uint tenth = 10;
+//         uint eleventh = 11;
+//         uint twelfth = 12;
+//         uint thirteenth = 13;
+//         uint fourteenth = 14;
+//         uint fifteenth = 15;
+//         uint sixteenth = 16;
 
-        return first +
-                second +
-                third +
-                fourth +
-                fifth +
-                sixth +
-                seventh +
-                eighth +
-                ninth +
-                tenth +
-                eleventh +
-                twelfth +
-                thirteenth +
-                fourteenth +
-                fifteenth +
-                sixteenth;
-    }
+//         return first +
+//                 second +
+//                 third +
+//                 fourth +
+//                 fifth +
+//                 sixth +
+//                 seventh +
+//                 eighth +
+//                 ninth +
+//                 tenth +
+//                 eleventh +
+//                 twelfth +
+//                 thirteenth +
+//                 fourteenth +
+//                 fifteenth +
+//                 sixteenth;
+//     }
 
 
 // from solidity:
