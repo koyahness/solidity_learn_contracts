@@ -51,7 +51,7 @@ contract AddressBook {
 
     }
 
-
+    // define an error for ContactNotFound
     error ContactNotFound(uint _msg_sender);
 
     // remove contact function
