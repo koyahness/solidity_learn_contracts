@@ -96,7 +96,7 @@ modifier onlyOwner() {
 }
 
 
-contract AddressBookFactory{
+contract AddressBookFactoryw{
 
     function deploy () public returns (AddressBook) {
         // deploy AddressBook, owner = msg.sender
@@ -107,4 +107,17 @@ contract AddressBookFactory{
 
     }
     
+}
+
+contract AddressBookFactory {
+    // Array to track all deployed address books
+    address[] public deployedAddressBooks;
+
+    function deploy() public returns (address) {
+        // We pass msg.sender to the constructor so the person calling the factory
+        // becomes the owner of the AddressBook, not the Factory contract itself.
+        AddressBook newContract = new AddressBook(msg.sender);
+        deployedAddressBooks.push(address(newContract));
+        return address(newContract);
+    }
 }
