@@ -23,6 +23,7 @@ contract AddressBook {
        uint[] phoneNumbers;
     }
 
+    //declare struct variable of Contact type
     Contact public contacts;
 
     Contact[] public non_deleted_contacts;
