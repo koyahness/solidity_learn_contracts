@@ -297,4 +297,7 @@ function badSubstractionFixed() public pure returns (int) {
     return first - second;
 }
 
+// Divide by Zero
+
+
 }
