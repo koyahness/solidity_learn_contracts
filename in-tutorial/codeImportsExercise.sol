@@ -32,12 +32,13 @@ function saveHaiku (string _line1, string _line2, string _line3) public {
     haiku.line1 = _line1;
     haiku.line2 = _line2;
     haiku.line3 = _line3;
-
 }
 
 // getHaiku should return the haiku as a Haiku type..
 function getHaiku () public return (Haiku) {
     return haiku;
 }
+
+
 
 }
