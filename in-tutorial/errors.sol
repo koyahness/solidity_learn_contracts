@@ -254,6 +254,17 @@ function badGetLastValueFixed() public pure returns (uint) {
 
 //block.timestamp can be manipulated. DO NOT use this as a source of randomness if any value can be derived from one outcome over another!
 
+//
+// 
+function badRandomLoop() public view returns (uint) {
+    uint seed = 0;
+    // DO NOT USE THIS METHOD FOR RANDOM NUMBERS!!! IT IS EASILY EXPLOITABLE!!!
+    while(uint(keccak256(abi.encodePacked(block.timestamp, seed))) % 1000 != 0) {
+        seed++;
+        // ...do something
+    }
 
+    return seed;
+}
 
 }
