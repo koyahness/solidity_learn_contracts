@@ -180,7 +180,7 @@ function stackDepthLimitFixed() public pure returns (uint) {
     }
 
 
-    
+
 
     uint subtotalB;
 
@@ -202,6 +202,8 @@ function stackDepthLimitFixed() public pure returns (uint) {
             fifteenth +
             sixteenth;
     }
+
+
 
 // solution fixing stack too deep error
     return subtotalA + subtotalB;
