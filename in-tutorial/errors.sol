@@ -298,6 +298,8 @@ function badSubstractionFixed() public pure returns (int) {
 }
 
 // Divide by Zero
+// Divide by zero errors also trigger a panic, with a code of 12.
+
 
 
 }
