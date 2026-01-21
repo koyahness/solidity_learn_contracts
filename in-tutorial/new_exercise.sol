@@ -37,7 +37,7 @@ contract AddressBook {
            );
 
 
-        } else {revert NotOwner(msg.sender, "not the owner!");}
+        } else {revert NotOwner(msg.sender);}
 
     }
 
