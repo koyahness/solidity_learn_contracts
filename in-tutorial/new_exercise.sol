@@ -82,79 +82,17 @@ modifier onlyOwner() {
         return contacts[_id];
     }
 
+     /**
+     * @dev 
+     */
+    function getAllContacts() public view returns (Contact[] memory) {
+        Contact[] memory all = new Contact[](contactIds.length);
+        for (uint i = 0; i < contactIds.length; i++) {
+            all[i] = contacts[contactIds[i]];
+        }
+        return all;
 
-
-
-
-
-
-
-
-
-
-    //declare struct variable of Contact type
-    Contact public contacts;
-
-    //declare struct array variable of Contact type
-    Contact[] public non_deleted_contacts;
-    
-    // define and error
-    error NotOwner(address _msg_sender);
-
-
-    // add function
-    function addContactw(uint _id, string memory _firstName, string memory _lastName, uint[] memory _phoneNumbers) public {
-        if (owner == msg.sender){
-
-           contacts = Contact (
-            _id,
-            _firstName,
-            _lastName,
-            _phoneNumbers
-           );
-
-           non_deleted_contacts.push(contacts);
-
-
-        } else {revert NotOwner(msg.sender);}
-
-    }
-
-    // define an error for ContactNotFound
-    error ContactNotFound(uint _msg_sender);
-
-    // remove contact function
-    function deleteContactw(uint _id) public returns (Contact memory){
-
-    if (owner == msg.sender){
-
-        if(_id == contacts.id){
-
-            delete contacts;
-
-        } else{revert ContactNotFound(_id);}
-
-
-        } else {revert NotOwner(msg.sender);}
 }
-
-
-    //add getcontact function
-    function getContactw(uint _id) public returns (Contact memory){
-
-         if(_id == contacts.id){
-
-            return contacts[_id];
-
-        } else{revert ContactNotFound(_id);}
-
-    }
-
-    //add getallcontact function
-    function getAllContacts() public returns (Contact[] memory) {
-        return non_deleted_contacts;
-    }
-
 }
 
 
