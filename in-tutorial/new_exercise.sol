@@ -51,23 +51,27 @@ contract AddressBook {
 
         if(_id == contacts.id){
 
-            return contacts[id];
+            delete contacts;
 
         } else{revert ContactNotFound(_id)}
 
 
         } else {revert NotOwner(msg.sender);}
 
+
     //view function
     function getContact(uint _id) public {
 
          if(_id == contacts.id){
 
-            delete contacts;
+            return contacts[id];
 
         } else{revert ContactNotFound(_id)}
 
     }
+
+    //
+    function getAllContacts() {}
 
 }
 
