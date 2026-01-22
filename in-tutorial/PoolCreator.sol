@@ -10,6 +10,8 @@ contract PoolCreator {
         uniswapFactory = IUniswapV3Factory(_factoryAddress);
     }
 
+    //The constructor receives the address of the pool factory and creates an instance of IUniswapV3Factory.
+
     function createPool(
         address tokenA,
         address tokenB,
