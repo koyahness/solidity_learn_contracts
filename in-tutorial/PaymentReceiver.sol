@@ -1,4 +1,5 @@
 contract PaymentReceiver {
+    
     address payable owner;
 
     constructor() payable {
