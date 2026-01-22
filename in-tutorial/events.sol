@@ -14,21 +14,27 @@ pragma solidity ^0.8.0;
 //events are an abstraction that allow you to store a transaction’s log information in the blockchain
 
 // contract that’s included by default in Hardhat.
+
 contract Lock {
+
     uint public unlockTime;
+
     address payable public owner;
 
-    event Created(address owner, uint amount);
+    event Created(address owner, uint amount); //the event is called Created and includes the address of the creator and the amount that was sent during the creation of the smart contract
 
     constructor(uint _unlockTime) payable {
+
         require(
             block.timestamp < _unlockTime,
             "Unlock time should be in the future"
         );
 
         unlockTime = _unlockTime;
+
         owner = payable(msg.sender);
 
         emit Created(msg.sender, msg.value);
     }
+
 }
