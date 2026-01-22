@@ -18,7 +18,7 @@ contract PoolCreator {
         uint24 fee
     ) external returns (address poolAddress) {
         // Check if a pool with the given tokens and fee already exists
-        poolAddress = uniswapFactory.getPool(tokenA, tokenB, fee);
+        poolAddress = uniswapFactory.getPool(tokenA, tokenB, fee); //The createPool function includes a validation to ensure the pool doesn’t exist
         if (poolAddress == address(0)) {
             // If the pool doesn't exist, create a new one
             poolAddress = uniswapFactory.createPool(tokenA, tokenB, fee);
