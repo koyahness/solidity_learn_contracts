@@ -38,3 +38,26 @@ contract Lock {
     }
 
 }
+
+// Events can be defined at the file level or as inheritable members of contracts (including interfaces).
+
+interface ILock {
+    event Created(address owner, uint amount);
+}
+
+contract Lock2 is ILock {
+    uint public unlockTime;
+    address payable public owner;
+
+    constructor(uint _unlockTime) payable {
+        require(
+            block.timestamp < _unlockTime,
+            "Unlock time should be in the future"
+        );
+
+        unlockTime = _unlockTime;
+        owner = payable(msg.sender);
+
+        emit Created(msg.sender, msg.value);
+    }
+}
