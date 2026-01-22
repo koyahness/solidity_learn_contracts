@@ -12,7 +12,7 @@ contract PoolCreator {
 
     //The constructor receives the address of the pool factory and creates an instance of IUniswapV3Factory.
 
-    function createPool(
+    function createPool( //
         address tokenA,
         address tokenB,
         uint24 fee
@@ -21,7 +21,7 @@ contract PoolCreator {
         poolAddress = uniswapFactory.getPool(tokenA, tokenB, fee); //The createPool function includes a validation to ensure the pool doesn’t exist
         if (poolAddress == address(0)) {
             // If the pool doesn't exist, create a new one
-            poolAddress = uniswapFactory.createPool(tokenA, tokenB, fee);
+            poolAddress = uniswapFactory.createPool(tokenA, tokenB, fee); //The createPool function creates a new pool.
         }
 
         return poolAddress;
