@@ -114,7 +114,7 @@ forge create ./src/NFT.sol:NFT --rpc-url $BASE_MAINNET_RPC --account deployer
 forge verify-contract <DEPLOYED_ADDRESS> ./src/NFT.sol:NFT --chain 84532 --watch
 ```
 
-output
+***output**
 
 ```
 Start verifying contract `0x71bfCe1172A66c1c25A50b49156FAe45EB56E009` deployed on base-sepolia
