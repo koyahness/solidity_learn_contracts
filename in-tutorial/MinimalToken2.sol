@@ -10,7 +10,7 @@ contract MinimalToken {
     mapping (address => uint) public balances;
     uint public totalSupply;
 
-    // Add a constructor that initializes the totalSupply at 3000 and assigns ownership to the contract creator
+    // Update the constructor and hardcode a distribution of the tokens to be evenly split between the first three test accounts:
     constructor() {
     totalSupply = 3000;
 
