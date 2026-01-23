@@ -65,6 +65,11 @@ output:
 
 <!-- By default the Foundry structure stores smart contracts in the src folder. You can change this in the foundry.toml configuration file. -->
 
+```bash
+[profile.default]
+src = 'contracts'
+```
+
 
 ## simple NFT smart contract (ERC-721) written in the Solidity programming language that can be used to replace src/Counter.sol
 
@@ -94,6 +99,8 @@ forge install openzeppelin/openzeppelin-contracts
 ```
 
 ## compiling the contract
+
+In order to compile the project, run:
 
 ```bash
 forge build
