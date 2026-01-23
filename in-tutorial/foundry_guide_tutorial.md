@@ -81,7 +81,7 @@ solc_version = "0.8.23"
 
 other settings in the foundry.toml file
 
-```bash
+```json
 [profile.default]
 src = "src"
 out = "out"
@@ -96,6 +96,8 @@ baseSepolia = "https://sepolia.base.org"
 baseSepolia = { key = "${BASESCAN_API_KEY}", url = "https://api-sepolia.basescan.org/api" }
 base = { key = "${BASESCAN_API_KEY}", url = "https://api.basescan.org/api" }
 ```
+Two JSON RPC endpoints for Base and Base Sepolia are included and similar for the Etherscan section, we included the configuration for Basescan for Sepolia and Mainnet. Both rely on the same API Key, BASESCAN_API_KEY.
+
 
 ## simple NFT smart contract (ERC-721) written in the Solidity programming language that can be used to replace src/Counter.sol
 
