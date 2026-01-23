@@ -21,4 +21,8 @@ contract MinimalToken {
 
 // Redeploy and test again. Now, each of the first three accounts should have 1000 tokens.
 
+// missing a way to allow the owners of these tokens to share them or spend them
+
+
+
 }
