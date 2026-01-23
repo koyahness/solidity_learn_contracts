@@ -520,8 +520,10 @@ Supra dVRF provides a decentralized VRF that ensures that the outcomes are not o
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract RNGContract {
-    address supraAddr;
+contract  {
+    address supraAddr; //address and assigns it to a member variable named supraAddr.
+                       // This address corresponds to the contract       address of the Supra Router Contract that will be used to generate random numbers
+                       // The contract address of the Supra Router Contract on Base Sepolia testnet is 0x99a021029EBC90020B193e111Ae2726264a111A2
     address supraClientAddress;
 
     constructor(address supraSC) {
