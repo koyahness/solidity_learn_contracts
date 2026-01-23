@@ -38,8 +38,10 @@ function transfer(address _to, uint _amount) public {
     balances[_to] += _amount;
 }
 
-// Destroying Tokens
+// Destroying Tokens: sedn to zero address
 
 // A more guaranteed way to destroy, or burn a token, is to transfer it to the default address 0x0000000000000000000000000000000000000000. This address is unowned and unownable, making it mathematically impossible to retrieve any tokens that are sent to it. Redeploy and try it out by sending 1000 tokens to the zero address.
+
+// The totalSupply remains unchanged, and the balance of the zero address is visible, but those tokens are stuck there forever.
 
 }
