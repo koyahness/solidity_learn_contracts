@@ -151,4 +151,8 @@ If verified on BaseScan/Etherscan, one can use the Read Contract and Write Contr
 
 To use Write Contract, one to connect web3 wallet first, by clicking the Connect to Web3 button.
 
-This can be done with Foundry.
+This can be done with Foundry using cast, key component of the Foundry toolkit.
+
+## Performing a call
+
+Cast enables us to interact with contracts, send transactions, and get onchain data using Ethereum RPC calls. 
