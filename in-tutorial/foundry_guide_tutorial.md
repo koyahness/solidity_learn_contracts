@@ -168,3 +168,11 @@ output is as follows:
 ```
 You should receive 0x0000000000000000000000000000000000000000000000000000000000000000 in response, which equals 0 in hexadecimal. And that makes sense — while you’ve deployed the NFT contract, no NFTs have been minted yet and therefore your account’s balance is zero.
 ```
+
+## Signing and publishing a transaction
+
+Sign and publish a transaction, calling the mint(address) function on the NFT contract you just deployed.
+
+```bash
+cast send <DEPLOYED_ADDRESS> --rpc-url=$BASE_SEPOLIA_RPC "mint(address)" <YOUR_ADDRESS_HERE> --account deployer
+```
