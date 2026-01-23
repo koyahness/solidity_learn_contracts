@@ -100,4 +100,11 @@ load the environment variables in the current command line session:
 source .env
 ```
 
+## Deploying the smart contract
+
+```bash
+forge create ./src/NFT.sol:NFT --rpc-url $BASE_SEPOLIA_RPC --account deployer
+
+forge create ./src/NFT.sol:NFT --rpc-url $BASE_MAINNET_RPC --account deployer
+```
 
