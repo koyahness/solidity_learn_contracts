@@ -446,3 +446,41 @@ Logs:
 Test result: ok. 2 passed; 0 failed; finished in 48.75ms
 ```
 Notice how you call the cheatcode vm.prank before the call to the counter.increment() and counter.setNumber(x) functions. This allows you to specify a particular address to become the msg.sender in the contract. Since the vm.prank accepts an address, you simply generate an address using the cheatcode vm.addr, where you pass a simple hexadecimal number, which is a valid private key.
+
+
+## Fuzz test: update TOML
+
+```bash
+[profile.default]
+src = 'src'
+out = 'out'
+libs = ['lib']
+solc_version = "0.8.23"
+```
+
+other settings in the foundry.toml file
+
+```json
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+solc_version = "0.8.23"
+
+[rpc_endpoints]
+base = "https://mainnet.base.org"
+baseSepolia = "https://sepolia.base.org"
+
+[etherscan]
+baseSepolia = { key = "${BASESCAN_API_KEY}", url = "https://api-sepolia.basescan.org/api" }
+base = { key = "${BASESCAN_API_KEY}", url = "https://api.basescan.org/api" }
+
+fuzz test
+
+```bash
+[fuzz]
+runs = 256
+out = 'out'
+libs = ['lib']
+solc
+```
