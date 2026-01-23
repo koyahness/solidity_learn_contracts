@@ -524,7 +524,9 @@ contract  {
     address supraAddr; //address and assigns it to a member variable named supraAddr.
                        // This address corresponds to the contract       address of the Supra Router Contract that will be used to generate random numbers
                        // The contract address of the Supra Router Contract on Base Sepolia testnet is 0x99a021029EBC90020B193e111Ae2726264a111A2
-    address supraClientAddress;
+
+    address supraClientAddress; //The contract also assigns the contract deployer (msg.sender) to a member variable named supraClientAddress
+                                //This should be the client wallet address that is registered and whitelisted to use Supra VRF
 
     constructor(address supraSC) {
         supraAddr = supraSC;
@@ -532,3 +534,5 @@ contract  {
     }
 }
 ```
+
+In your project, add the code provided above to a new file named src/ExampleContract.sol, and delete the src/Counter.sol contract that was generated with the project. (you can also delete the test/Counter.t.sol and script/Counter.s.sol files).
