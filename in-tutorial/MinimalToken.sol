@@ -16,6 +16,8 @@ contract MinimalToken {
 
     balances[msg.sender] = totalSupply;
 
-    
+    // Deploy and test to confirm that the total supply is 3000, and the balance of the first account is as well.
+
+
 }
 }
