@@ -63,6 +63,9 @@ output:
     └── Counter.t.sol
 ```
 
+<!-- By default the Foundry structure stores smart contracts in the src folder. You can change this in the foundry.toml configuration file. -->
+
+
 ## simple NFT smart contract (ERC-721) written in the Solidity programming language that can be used to replace src/Counter.sol
 
 ```solidity
