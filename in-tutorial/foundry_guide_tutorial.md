@@ -120,11 +120,14 @@ forge verify-contract <DEPLOYED_ADDRESS> ./src/NFT.sol:NFT --chain 84532 --watch
 Start verifying contract `0x71bfCe1172A66c1c25A50b49156FAe45EB56E009` deployed on base-sepolia
 
 Submitting verification for [src/NFT.sol:NFT] 0x71bfCe1172A66c1c25A50b49156FAe45EB56E009.
+
 Submitted contract for verification:
+
         Response: `OK`
         GUID: `3i9rmtmtyyzkqpfvy7pcxj1wtgqyuybvscnq8d7ywfuskss1s7`
         URL:
         https://sepolia.basescan.org/address/0x71bfce1172a66c1c25a50b49156fae45eb56e009
+
 Contract verification status:
 Response: `NOTOK`
 Details: `Pending in queue`
@@ -141,3 +144,11 @@ Start verifying contract `0x71bfCe1172A66c1c25A50b49156FAe45EB56E009` deployed o
 
 Contract [src/NFT.sol:NFT] "0x71bfCe1172A66c1c25A50b49156FAe45EB56E009" is already verified. Skipping verification.
 ```
+
+## Interacting with the Smart Contract
+
+If verified on BaseScan/Etherscan, one can use the Read Contract and Write Contract sections under the Contract tab to interact with the deployed contract.
+
+To use Write Contract, one to connect web3 wallet first, by clicking the Connect to Web3 button.
+
+This can be done with Foundry.
