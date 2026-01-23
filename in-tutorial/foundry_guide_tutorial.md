@@ -181,3 +181,14 @@ output
 ```
 If successful, Foundry will respond with information about the transaction, including the blockNumber, gasUsed, and transactionHash
 ```
+
+Confirm that it minted one NFT
+```bash
+cast call <DEPLOYED_ADDRESS> --rpc-url $BASE_SEPOLIA_RPC "balanceOf(address)" <YOUR_ADDRESS_HERE>
+```
+
+output is as follows:
+
+```
+And the response: 0x0000000000000000000000000000000000000000000000000000000000000001 (1 in hex) — congratulations, you deployed a contract and minted an NFT with Foundry!
+```
