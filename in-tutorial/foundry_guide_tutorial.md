@@ -69,3 +69,11 @@ forge install openzeppelin/openzeppelin-contracts
 ```bash
 forge build
 ```
+
+## Storing your private key
+
+```bash
+cast wallet import deployer --interactive
+```
+
+
