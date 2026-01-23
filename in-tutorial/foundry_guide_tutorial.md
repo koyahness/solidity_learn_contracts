@@ -4,7 +4,7 @@ Foundry is a powerful suite of tools to develop, test, and debug your smart cont
 
 * forge: the main workhorse of Foundry — for developing, testing, compiling, and deploying smart contracts
 
-* cast: a command-line tool for performing Ethereum RPC calls (e.g., interacting with contracts, sending transactions, and getting onchain data)
+* cast: a command-line tool for performing Ethereum RPC calls (e.g., interacting with contracts, sending transactions, and getting onchain data). Interact with the Blockchain over RPC, You can make smart contract calls, send transactions, or retrieve any type of chain data.
   
 * anvil: a local testnet node, for testing contract behavior from a frontend or over RPC
   
