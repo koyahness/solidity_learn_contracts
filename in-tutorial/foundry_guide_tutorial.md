@@ -57,3 +57,9 @@ contract NFT is ERC721 {
     }
 }
 ```
+
+## add the OpenZeppelin Contracts library
+
+```bash
+forge install openzeppelin/openzeppelin-contracts
+```
