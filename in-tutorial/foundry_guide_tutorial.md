@@ -260,4 +260,44 @@ And the response: 0x000000000000000000000000000000000000000000000000000000000000
 # Foundry: Testing smart contracts
 
 * Write and execute tests written in Solidity using the Forge Standard Library with Foundry
-* se the cheatcodes that Foundry provides to test your smart contracts
+* Use the cheatcodes that Foundry provides to test your smart contracts
+* Testing is a crucial aspect of smart contract development, ensuring the reliability and security of your code.
+* It is impossible to patch a smart contract after deployment, you must thoroughly and completely test your code.
+* Foundry provides a robust testing framework that allows developers to create comprehensive test suites for their projects using Solidity.
+
+## Test with Foundry
+
+Default test that the forge init hello_foundry_in_base command provides in the seed Foundry project.
+
+```solidity
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.19;
+
+import "forge-std/Test.sol";
+import "../src/Counter.sol";
+
+contract CounterTest is Test {
+    Counter public counter;
+
+    function setUp() public {
+        counter = new Counter();
+        counter.setNumber(0);
+    }
+
+    function testIncrement() public {
+        counter.increment();
+        assertEq(counter.number(), 1);
+    }
+
+    function testSetNumber(uint256 x) public {
+        counter.setNumber(x);
+        assertEq(counter.number(), x);
+    }
+}
+```
+
+
+
+
+
+
