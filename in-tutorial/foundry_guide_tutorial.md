@@ -17,6 +17,14 @@ curl -L https://foundry.paradigm.xyz | bash
 
 foundryup
 ```
+## Version verification
+
+```bash
+forge --version
+cast --version
+chisel --version
+anvil --version
+bash
 
 ## Creating a project
 
