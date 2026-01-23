@@ -176,3 +176,8 @@ Sign and publish a transaction, calling the mint(address) function on the NFT co
 ```bash
 cast send <DEPLOYED_ADDRESS> --rpc-url=$BASE_SEPOLIA_RPC "mint(address)" <YOUR_ADDRESS_HERE> --account deployer
 ```
+
+output
+```
+If successful, Foundry will respond with information about the transaction, including the blockNumber, gasUsed, and transactionHash
+```
