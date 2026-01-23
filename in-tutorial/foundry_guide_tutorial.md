@@ -479,7 +479,7 @@ fuzz test
 
 ```bash
 [fuzz]
-runs = 256
+runs = 600
 max_test_rejects = 65536
 seed = "0x3e8"
 dictionary_weight = 40
@@ -491,4 +491,14 @@ run:
 
 ```bash
 forge test -vv
+```
+
+* test will run 600 times
+* test will run 600 different random numbers
+
+output
+
+```
+Running 1 tests for test/Counter.t.sol:CounterTest
+[PASS] testFuzz_SetNumber(uint256) etc
 ```
