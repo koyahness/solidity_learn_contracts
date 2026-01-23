@@ -8,7 +8,7 @@ Foundry is a powerful suite of tools to develop, test, and debug your smart cont
   
 * anvil: a local testnet node, for testing contract behavior from a frontend or over RPC
   
-* chisel: a Solidity REPL, for trying out Solidity snippets on a local or forked network
+* chisel: a Solidity REPL, for trying out Solidity snippets on a local or forked network. You can write Solidity code directly
 
 ## Have Foundry installed
 
