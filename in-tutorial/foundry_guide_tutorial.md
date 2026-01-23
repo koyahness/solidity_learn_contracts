@@ -1,4 +1,4 @@
-# Foundry guide
+# Foundry guide: Deploying smart contract
 
 Foundry is a powerful suite of tools to develop, test, and debug your smart contracts. It comprises several individual tools:
 
@@ -256,3 +256,6 @@ output is as follows:
 ```
 And the response: 0x0000000000000000000000000000000000000000000000000000000000000001 (1 in hex) — congratulations, you deployed a contract and minted an NFT with Foundry!
 ```
+
+# Foundry: Testing smart contracts
+
