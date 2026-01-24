@@ -13,11 +13,12 @@ constructor {
     totalSupply = 100,000,000;
 }
 
-
+//custom errors
 error AllTokensClaimed(uint _totalSupply);
 error TokensClaimed(uint __amountClaimed);
 error UnsafeTransfer(uint _balance, uint _msgvalue);
 error BalanceNotEnough(uint _balance);
+
 
 function claim (uint _amountClaimed) public {
     if (claimed[msg.sender] == 0) {
@@ -29,8 +30,6 @@ function claim (uint _amountClaimed) public {
     } else {revert AllTokensClaimed(totalSupply);}
     } else {revert TokensClaimed(_amountClaimed);}
 }
-
-
 
 
 function safeTransfer (address _to, uint _amount) public {
