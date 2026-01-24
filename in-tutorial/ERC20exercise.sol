@@ -63,7 +63,27 @@ if (maxSupply >=  claimTokens){
 } else {revert TokensClaimed()}
 
 
+function createIssue(string memory _issueDesc, uint _quorum) external {
+    
+    if (claimed[msg.sender] == false){
 
+if (maxSupply >=  claimTokens){
+     _mint(msg.sender, claimTokens);
+    claimed[msg.sender] == true;
+    maxSupply -= claimTokens;
+    }else {AllTokensClaimed()}
+
+}
+} else {revert TokensClaimed()}
+
+
+
+
+
+    issues.issueDesc = _issueDesc;
+    issues.quorum = _quorum;
+
+}
 
 
 }
