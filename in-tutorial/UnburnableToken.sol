@@ -40,15 +40,11 @@ function  (address _to, uint _amount) public {
         if (balances[msg.sender] > _amount) {
              balances[_to] += _amount;
              balances[msg.sender] -= _amount;
+             
         } else {revert BalanceNotEnough(balances[msg.sender]);}
 
 } else {revert UnsafeTransfer();}
 
 }
-
-
-
-
-
 
 }
