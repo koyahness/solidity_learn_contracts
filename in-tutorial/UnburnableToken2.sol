@@ -8,7 +8,7 @@ uint public totalClaimed;
 mapping (address => uint) public balances;
 mapping (address => bool) public claimed;
 
-
+// sets total supply
 constructor {
     totalSupply = 100,000,000;
 }
