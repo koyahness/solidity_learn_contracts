@@ -61,8 +61,11 @@ if (maxSupply >=  claimTokens){
     claimedSupply += claimTokens;
     }else {AllTokensClaimed()}
 
-}
+
 } else {revert TokensClaimed()}
+
+}
+
 
 
 function createIssue(string memory _issueDesc, uint _quorum) external returns (uint) {
@@ -74,16 +77,15 @@ function createIssue(string memory _issueDesc, uint _quorum) external returns (u
         issues.quorum = _quorum;
         return issues[];
         } else {revert QuorumTooHigh(int256 quorum)}
-}
+
 } else {revert NoTokensHeld()}
 
-
-
-
-
-   
-
 }
+
+
+
+
+
 
 
 }
