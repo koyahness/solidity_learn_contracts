@@ -14,11 +14,11 @@ constructor {
 }
 
 
-error AllTokensClaimed(uint _totalSupply)
-error TokensClaimed(uint __amountClaimed)
+error AllTokensClaimed(uint _totalSupply);
+error TokensClaimed(uint __amountClaimed);
 
 function claim (uint _amountClaimed) public {
-    if (claimed[msg.sender] == 0) {_amountClaimed
+    if (claimed[msg.sender] == 0) {
     if (totalSupply >= _amountClaimed){
         balances[msg.sender] += _amountClaimed
         claimed[msg.sender] = true
