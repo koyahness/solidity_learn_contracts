@@ -47,26 +47,22 @@ for(uint i = 0; i < haikus.length; i++) {
 }
 }
 
+
 error NotYourHaiku(uint _id);
 
 function shareHaiku (address _to, uint _id) public {
-
     if (sharedHaikus[msg.sender] == _id){
-
         sharedHaikus[_to] = _id;
-
     } else {revert NotYourHaiku(_id)}
-
-
 }
 
 
 
 function getMySharedHaikus () public returns (Haiku[] memory) {
-return haikus;
+    if (sharedHaikus[msg.sender] != 0){
+        
+    }
 }
-
-
 
 
 }
