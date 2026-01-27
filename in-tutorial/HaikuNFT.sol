@@ -55,11 +55,10 @@ function shareHaiku (address _to, uint _id) public {
 
         sharedHaikus[_to] = _id;
 
-    }else {revert NotYourHaiku(_id)}
+    } else {revert NotYourHaiku(_id)}
 
 
 }
-
 
 
 
